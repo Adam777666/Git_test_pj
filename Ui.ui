@@ -13,25 +13,75 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="kryg_But">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>190</y>
-      <width>251</width>
-      <height>161</height>
+      <x>660</x>
+      <y>550</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 251, 129);</string>
+    </property>
+    <property name="text">
+     <string>Нажми</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>650</width>
+      <height>600</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 251, 129);
-border-radius: 15px;
 border-style: solid;
 border-width:5px;
 border-color: black;</string>
     </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>450</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-style: solid;
+</string>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>ping.png</normaloff>ping.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
     </property>
    </widget>
   </widget>
