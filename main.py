@@ -5,16 +5,19 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 import random
 
 
+# основная форма
 class MainFormlo(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('Ui.ui', self)
         self.setWindowTitle('Кругляжки')
         self.setWindowIcon(QIcon('ping.png'))
+        # выжные дня создания кругляшек переменные
         self.a = 0
         self.px = 0
         self.kryg_But.clicked.connect(self.creator)
 
+    # функция создаюшая кругляшки
     def creator(self):
         btn = QPushButton(self)
         self.giv_random2()
@@ -28,9 +31,11 @@ border-width:5px;
 border-color: black;''')
         btn.show()
 
+    # функция рандома
     def giv_random(self):
         return random.randrange(0, 559), random.randrange(0, 255), random.randrange(10, 509)
 
+    # вторая функция псевдо рандома
     def giv_random2(self):
         self.lol_staf = (31, 41, 51, 61, 71, 81, 91)
         self.a = random.choice(self.lol_staf)
