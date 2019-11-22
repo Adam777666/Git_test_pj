@@ -25,7 +25,7 @@ class MainFormlo(QMainWindow, Ui_MainWindow):
             btn.resize(self.a, self.a)
             btn.move(self.giv_random()[0], self.giv_random()[2])
             btn.setStyleSheet(
-                f'''background-color: rgb({self.giv_random()[1]}, {self.giv_random()[1]}, {self.giv_random()[1]});
+                f'''background-color: rgb(255, 251, 150);
     border-radius: {self.px}px;
     border-style: solid;
     border-width:5px;
