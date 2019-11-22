@@ -2,14 +2,14 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
+from ui import Ui_MainWindow
 import random
 
 
-# основная форма
-class MainFormlo(QMainWindow):
+class MainFormlo(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('Ui.ui', self)
+        self.setupUi(self)
         self.setWindowTitle('Кругляжки')
         self.setWindowIcon(QIcon('ping.png'))
         # выжные дня создания кругляшек переменные
@@ -19,17 +19,18 @@ class MainFormlo(QMainWindow):
 
     # функция создаюшая кругляшки
     def creator(self):
-        btn = QPushButton(self)
-        self.giv_random2()
-        btn.resize(self.a, self.a)
-        btn.move(self.giv_random()[0], self.giv_random()[2])
-        btn.setStyleSheet(
-            f'''background-color: rgb({self.giv_random()[1]}, {self.giv_random()[1]}, {self.giv_random()[1]});
-border-radius: {self.px}px;
-border-style: solid;
-border-width:5px;
-border-color: black;''')
-        btn.show()
+        for i in range(2):
+            btn = QPushButton(self)
+            self.giv_random2()
+            btn.resize(self.a, self.a)
+            btn.move(self.giv_random()[0], self.giv_random()[2])
+            btn.setStyleSheet(
+                f'''background-color: rgb({self.giv_random()[1]}, {self.giv_random()[1]}, {self.giv_random()[1]});
+    border-radius: {self.px}px;
+    border-style: solid;
+    border-width:5px;
+    border-color: black;''')
+            btn.show()
 
     # функция рандома
     def giv_random(self):
